@@ -34,6 +34,6 @@ function install {
 }
 
 
+playbook_filename="playbooks/django_playbook.yml"
 
-pip install ansible
-
+ansible-playbook -i "localhost," -c local $playbook_filename
