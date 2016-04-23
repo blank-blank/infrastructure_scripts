@@ -1,0 +1,16 @@
+#---
+#install django and make it usable
+
+- hosts: all
+  sudo: yes
+
+  vars:
+    java_default: "/default"
+
+  tasks:
+
+  - name: install django
+    pip: name=django
+    #do through pip shell: service graylog-collector stop
+
+
