@@ -21,4 +21,4 @@ then
     exit 1
 fi
 
-aws cloudformation create-stack --stack-name myfirstteststack --region us-west-2 --template-body file:////$TEMPLATE_DIR//mytemplate.json
+aws cloudformation create-stack --stack-name instancestack --region us-west-2 --parameters ParameterKey=KeyName,ParameterValue=tim_keypair,ParameterKey=InstanceType,ParameterValue=t2.small --template-body file:////$TEMPLATE_DIR//mytemplate.json
