@@ -21,4 +21,4 @@ then
     exit 1
 fi
 
-aws cloudformation create-stack --stack-name myfirstteststack --region us-west-2 --template-body file:////templates//mytemplate.json
+aws cloudformation create-stack --stack-name myfirstteststack --region us-west-2 --template-body file:////$TEMPLATE_DIR//mytemplate.json
