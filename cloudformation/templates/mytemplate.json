@@ -37,26 +37,26 @@
             "voip_install" : ["install_chefdk", "install_chef"]
           },
 
-         "install_chef" : {
-            "sources" : {
-              "/var/chef/chef-repo" : "http://github.com/opscode/chef-repo/tarball/master"
-            },
-            "files" : {
-              "/tmp/install.sh" : {
-                "source" : "https://www.opscode.com/chef/install.sh",
-                "mode"  : "000400",
-                "owner" : "root",
-                "group" : "root"
-              },
-              "/var/chef/chef-repo/.chef/knife.rb" : {
-                "content" : { "Fn::Join": [ "", [
-                  "cookbook_path [ '/var/chef/chef-repo/cookbooks' ]\n",
-                  "node_path [ '/var/chef/chef-repo/nodes' ]\n"
-                ]]},
-                "mode"  : "000400",
-                "owner" : "root",
-                "group" : "root"
-              },
+            "install_chef" : {
+                "sources" : {
+                "/var/chef/chef-repo" : "http://github.com/opscode/chef-repo/tarball/master"
+                },
+                "files" : {
+                    "/tmp/install.sh" : {
+                        "source" : "https://www.opscode.com/chef/install.sh",
+                        "mode"  : "000400",
+                        "owner" : "root",
+                        "group" : "root"
+                },
+                "/var/chef/chef-repo/.chef/knife.rb" : {
+                    "content" : { "Fn::Join": [ "", [
+                      "cookbook_path [ '/var/chef/chef-repo/cookbooks' ]\n",
+                      "node_path [ '/var/chef/chef-repo/nodes' ]\n"
+                    ]]},
+                    "mode"  : "000400",
+                    "owner" : "root",
+                    "group" : "root"
+                 },
               "/var/chef/chef-repo/.chef/client.rb" : {
                 "content" : { "Fn::Join": [ "", [
                   "cookbook_path [ '/var/chef/chef-repo/cookbooks' ]\n",
@@ -94,7 +94,7 @@
         }
     }
 }
-
+}
 
 
 
