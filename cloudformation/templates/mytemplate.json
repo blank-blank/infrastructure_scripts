@@ -37,7 +37,7 @@
             "voip_install" : ["install_chefdk", "install_chef"]
           },
 
-            "install_chef" : {
+         "install_chef" : {
                 "sources" : {
                 "/var/chef/chef-repo" : "http://github.com/opscode/chef-repo/tarball/master"
                 },
@@ -91,13 +91,9 @@
             }
           }
 
+
+        }
         }
     }
+    }
 }
-}
-
-
-
-
-
-
