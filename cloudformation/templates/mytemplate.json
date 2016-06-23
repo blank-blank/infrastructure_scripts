@@ -25,7 +25,7 @@
           "Properties" : {
             "ImageId" : "ami-f303fb93",
             "KeyName" : { "Ref" : "KeyName" },
-            "IntanceType" : { "Ref" : "InstanceType" },
+            "InstanceType" : { "Ref" : "InstanceType" },
             "NetworkInterfaces": [ {
               "AssociatePublicIpAddress": "true",
               "DeviceIndex": "0"
