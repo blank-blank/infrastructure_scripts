@@ -1,6 +1,6 @@
 {
     "Resources" : {
-        "HelloBucket" : {
+        "HelloVoipBucket" : {
             "Type" : "AWS::S3::Bucket"
         }
     }

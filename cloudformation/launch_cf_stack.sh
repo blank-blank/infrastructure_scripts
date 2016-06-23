@@ -20,5 +20,5 @@ then
     echo "TEMPLATE_FILEPATH does not exist" 
     exit 1
 fi
-exit
+
 aws cloudformation create-stack --region us-west-2 --template-body file:////templates//mytemplate.json
