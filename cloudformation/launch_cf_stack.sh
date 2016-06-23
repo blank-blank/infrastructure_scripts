@@ -16,6 +16,7 @@ fi
 
 if [ ! -f $TEMPLATE_FILEPATH ]
 then
+    echo $TEMPLATE_FILEPATH
     echo "TEMPLATE_FILEPATH does not exist" 
     exit 1
 fi
