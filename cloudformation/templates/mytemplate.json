@@ -30,9 +30,44 @@
               "AssociatePublicIpAddress": "true",
               "DeviceIndex": "0"
             } ]
-          }
+          },
+          "Metadata" : {
+              "AWS::CloudFormation::Init" : {
+                "config" : {
+                  "packages" : {
+                    :
+                  },
+                  "groups" : {
+                    :
+                  },
+                  "users" : {
+                    :
+                  },
+                  "sources" : {
+                    :
+                  },
+                  "files" : {
+                    :
+                  },
+                  "commands" : {
+                    :
+                  },
+                  "services" : {
+                    :
+                  }
+                }
+              }
+            },
+            "Properties": {
+              :
+            }
         }
     }
 }
+
+
+
+
+
 
 
