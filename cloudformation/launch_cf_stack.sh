@@ -3,7 +3,7 @@ set -e
 
 if [ -z "$TEMPLATE_DIR" ]
 then
-    TEMPLATE_DIR="$(pwd)/templates"
+    TEMPLATE_DIR="$(dirname $0)/cloudformation/templates"
 fi
 TEMPLATE_FILE="$1"
 TEMPLATE_FILEPATH="${TEMPLATE_DIR}/${TEMPLATE_FILE}"
