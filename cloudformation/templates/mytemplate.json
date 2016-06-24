@@ -39,21 +39,16 @@
                        "         --stack ", { "Ref" : "AWS::StackName" },
                        "         --resource Ec2Instance ",
                        "         --configsets voip_install ",
-                       "         --region ", { "Ref" : "AWS::Region" }, "\n",
-                       "git clone https://github.com/blank-blank/infrastructure_scripts.git /tmp/infrastructure_scripts\n",
-                       "cd /tmp/infrastructure_scripts/chef\n",
-                       "chef-client -z -o helloworld \n"
+                       "         --region ", { "Ref" : "AWS::Region" }, "\n"
             ]]}}
 
 
           },
 
-
-        
           "Metadata" : {
             "AWS::CloudFormation::Init" : {
             "configSets" : {
-            "voip_install" : ["install_chefdk", "install_chef"]
+            "voip_install" : ["install_chefdk", "install_chef", "install_git", "get_chef_cookbooks", "run_cookbook"]
           },
 
          "install_chef" : {
@@ -108,8 +103,28 @@
                 "chefdk" : "https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.2.0-2.el6.x86_64.rpm"
               }
             }
-          }
+          },
+          "install_git":{
+            "packages" : {
+                "yum" :{
+                    "git" : []
+                }
+            }
+          },
+          "get_chef_cookbooks" : { 
+            "commands" : {
+                "01_clone_repo" : {
+                    "command" : "git clone https://github.com/blank-blank/infrastructure_scripts.git /tmp/infrastructure_scripts"
 
+                }
+              }
+           },
+           "run_cookbook" : {
+
+                "cwd" : "/tmp/infrastructure_scripts/chef",
+
+                "command" : "chef-client -z -o helloworld"
+          }
 
         }
         }
