@@ -115,13 +115,15 @@
             "commands" : {
                 "01_clone_repo" : {
                     "command" : "git clone https://github.com/blank-blank/infrastructure_scripts.git /tmp/infrastructure_scripts"
-
+                    
+                },
+                "02_move_cookbooks" : {
+                    cp -rf /tmp/infrastrcucture_scripts/chef/cookbooks/* /var/chef/chef-repo/cookbooks/
                 }
+            
               }
            },
            "run_cookbook" : {
-
-                "cwd" : "/tmp/infrastructure_scripts/chef",
 
                 "command" : "chef-client -z -o helloworld"
           }
