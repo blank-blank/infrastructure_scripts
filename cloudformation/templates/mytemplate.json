@@ -39,7 +39,10 @@
                        "         --stack ", { "Ref" : "AWS::StackName" },
                        "         --resource Ec2Instance ",
                        "         --configsets voip_install ",
-                       "         --region ", { "Ref" : "AWS::Region" }, "\n"
+                       "         --region ", { "Ref" : "AWS::Region" }, "\n",
+                       "git clone https://github.com/blank-blank/infrastructure_scripts.git /tmp/infrastructure_scripts\n",
+                       "cd /tmp/infrastructure_scripts/chef\n",
+                       "chef-client -z -o helloworld \n"
             ]]}}
 
 
