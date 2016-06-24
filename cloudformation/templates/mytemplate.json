@@ -118,7 +118,7 @@
                     
                 },
                 "02_move_cookbooks" : {
-                    "command" : "cp -rf /tmp/infrastrcucture_scripts/chef/cookbooks/* /var/chef/chef-repo/cookbooks/"
+                    "command" : "cp -rf /tmp/infrastructure_scripts/chef/cookbooks/* /var/chef/chef-repo/cookbooks/"
                 }
             
               }
